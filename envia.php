@@ -28,7 +28,7 @@ try {
     $mail->addReplyTo($_POST['email'], $_POST['name']); 
     // $mail->addCC('cc@example.com');    // = adicionar copia 
 
-    // Anexo
+    // Anexo (caso não nao utlize anexo remova toda essa parte)
     $arquivo = $_FILES["arquivo"]; // nome salvo no campo name - de arquivos
     // envia com o sem anexo
     if(isset($_FILES['arquivo']['tmp_name']) && $_FILES['arquivo']['tmp_name'] != "") {
@@ -49,7 +49,7 @@ try {
     $mail->Body .= " <b>Mensagem:</b> ".nl2br($_POST['message'])."<br>"; 
 
 
-    // Recaptcha   
+    // Recaptcha   ( caso nao deseje utilizar remova essa parte)
     require_once "assets/recaptchalib.php";
     $secret = "SENHA"; // definir a chave secreta
     $response = null;
@@ -58,7 +58,7 @@ try {
     if ($response != null && $response->success) { 
     }
    
-    // Ação apos clicar em enviar
+    // Ação apos clicar em enviar ( 2 opçoes abaixo - mensagem ou redirecionamento)
         $mail->send();
        // echo 'Mensagem enviada com sucesso'; // opçao de texto
        header('Location: msgenviada.html');
