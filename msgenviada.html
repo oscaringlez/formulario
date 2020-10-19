@@ -1,0 +1,41 @@
+v>
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>formulariobase</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/Contact-Form-Clean.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+
+<body>
+    <div class="contact-clean">
+        <form method="post" action="envia.php" enctype="multipart/form-data">
+            <h2 class="text-center">Contato</h2>
+            <div class="alert alert-success" role="alert" style="background: rgb(222,238,251);"><span><strong>Mensagem enviada com sucesso!</strong></span></div>
+            <div class="form-group"><input class="form-control" type="text" name="name" placeholder="Nome" required=""></div>
+            <div class="form-group"><input class="form-control" type="email" name="email" placeholder="Email" required=""></div>
+            <div class="form-group">
+                <p>Escolha&nbsp;</p><select class="form-control" name="selecionar"><option value="Opção A">Opção A</option><option value="Opção B">Opção  B</option></select></div>
+            <div class="form-group">
+                <p>Escolha</p>
+                <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-2" name="opcao" value="A"><label class="form-check-label" for="formCheck-1">Opção A</label></div>
+                <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-1" name="opcao" value="B"><label class="form-check-label" for="formCheck-1">Opção B</label></div>
+            </div>
+            <div class="form-group"><input class="form-control" type="text" name="assunto" placeholder="Assunto" required=""></div>
+            <div class="form-group"><textarea class="form-control" name="message" placeholder="Mensagem" rows="14"></textarea></div>
+            <input id="arquivo"  type="file" name="arquivo"> 
+            <div class="g-recaptcha" data-sitekey="SENHA DO SITE RECAPATCHA"></div>
+            <div class="form-group"><button class="btn btn-primary" type="submit">Enviar</button></div>
+        </form>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>
