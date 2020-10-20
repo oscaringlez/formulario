@@ -50,7 +50,7 @@ try {
 
 
     // Recaptcha   ( caso nao deseje utilizar remova essa parte)
-    require_once "assets/recaptchalib.php";
+    require_once(dirname(__FILE__) . '/assets/recaptchalib.php');
     $secret = "SENHA"; // definir a chave secreta
     $response = null;
     $reCaptcha = new ReCaptcha($secret);
